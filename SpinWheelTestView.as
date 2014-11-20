@@ -17,7 +17,7 @@
 	import fl.transitions.easing.*;
 	import flash.utils.Timer;
 	
-	public class SpinWheel extends Sprite
+	public class SpinWheelTestView extends Sprite
 	{
 		public var STAGE_SIZE:Number = 614;
 		public var wheel:Sprite = new SwWheel;
@@ -42,7 +42,7 @@
 		public var aniWin:Tween;
 		public var startTime:Number;
 		
-		public function SpinWheel()
+		public function SpinWheelTestView()
 		{
 			/*addChild(wheel);
 			addChild(arw);
@@ -139,46 +139,45 @@
 		//private function spinIt(e:Event):void 
 		{
 			
-			/*if(proxy.getrandomInt() != 0){
-				PICKER = proxy.getrandomInt();
+			if(true){
+				var MARKER:int = Math.random()*100+1;
 				trace(PICKER);
-				
 				var gap:Number = 150;// default to $5
-				if (PICKER == 6 || PICKER == 12) {
+				if (PICKER == 6 || PICKER == 12 || MARKER > 99) {	//1
 					trace("$500");
 					Result.text = "+$500";
 					gap = 0;
 				}else
-				if (PICKER == 5 || PICKER == 11) {
+				if (PICKER == 5 || PICKER == 11 || MARKER > 97) {	//2
 					trace("$100");
 					Result.text = "+$100";
 					gap = 60;
 				}else
-				if (PICKER == 4 || PICKER == 10) {
+				if (PICKER == 4 || PICKER == 10 || MARKER > 92) {	//5
 					trace("$50");
 					Result.text = "+$50";
 					gap = 120;
 				}else
-				if (PICKER == 3 || PICKER == 9) {
+				if (PICKER == 3 || PICKER == 9 || MARKER > 85) {	//7
 					trace("$20");
 					Result.text = "+$20";
 					gap = 90;
 				}else
-				if (PICKER == 2 || PICKER == 8) {
+				if (PICKER == 2 || PICKER == 8 || MARKER > 75) {	//10
 					trace("$10");
 					Result.text = "+$10";
 					gap = 30;
-				}else{
+				}else{												//75
 					trace("$5");
 					Result.text = "+$5";
 					gap = 150;
-				}*/
+				}
 				
 				var spinTime:Number=7;
-				var endRot:Number=360*5;
+				var endRot:Number=360*5 + gap;
 				spinTween = new Tween(wheel, "rotation", Regular.easeOut, wheel.rotation, endRot, spinTime, true);
 				spinTween.addEventListener(TweenEvent.MOTION_FINISH, spinTween_finished);
-			//}
+			}
 		}
 		
 		private function spinTween_finished(e:TweenEvent):void

@@ -175,7 +175,7 @@
 				}
 				
 				var spinTime:Number=7;
-				var endRot:Number=360*5;
+				var endRot:Number=360*5 + gap;
 				spinTween = new Tween(wheel, "rotation", Regular.easeOut, wheel.rotation, endRot, spinTime, true);
 				spinTween.addEventListener(TweenEvent.MOTION_FINISH, spinTween_finished);
 			}
