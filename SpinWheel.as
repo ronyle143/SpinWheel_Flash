@@ -70,15 +70,15 @@
 			ping.width = 614;
 			var paramObj:Object = LoaderInfo(this.root.loaderInfo).parameters;
 			
-			/*Settings.USERNAME = paramObj.USERNAME;
+			Settings.USERNAME = paramObj.USERNAME;
 			Settings.PASSWORD = paramObj.PASSWORD;
-			Settings.API_URL = paramObj.API_URL;*/
-			Settings.USERNAME = "spinuser";
+			Settings.API_URL = paramObj.API_URL;
+			/*Settings.USERNAME = "spinuser";
 			Settings.PASSWORD = "unetof66";
-			Settings.API_URL = "https://secure.playersrewardscard.com/ws/spin";
+			Settings.API_URL = "https://secure.playersrewardscard.com/ws/spin";*/
 			trace(Settings.USERNAME,Settings.PASSWORD,Settings.API_URL);
 			ping.text = "UN: "+Settings.USERNAME + "\nPW:"+Settings.PASSWORD + "\nAU:"+Settings.API_URL; 
-	addChild(ping);
+	//addChild(ping);
 		}
 		
 		private function generateUI(e:Event):void 
