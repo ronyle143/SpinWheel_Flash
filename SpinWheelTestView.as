@@ -20,6 +20,7 @@
 	public class SpinWheelTestView extends Sprite
 	{
 		public var STAGE_SIZE:Number = 614;
+		public var base:Sprite = new Base;
 		public var wheel:Sprite = new SwWheel;
 		public var Arrow:Sprite = new arr;
 		public var Bits:SimpleButton = new bits;
@@ -30,7 +31,7 @@
 		
 		public var PICKER:int = 1;
 		
-		public var rd:URLredirect = new URLredirect();
+		//public var rd:URLredirect = new URLredirect();
 		public var proxy:WebServiceProxy = new WebServiceProxy();
 		
 		public var spinning:Boolean = false;
@@ -80,11 +81,12 @@
 		private function generateUI():void 
 		{
 			trace("READY!");
+			holder1.addChild(base);
+			base.x= STAGE_SIZE/2;
+			base.y= STAGE_SIZE/2;
 			holder1.addChild(wheel);
-			wheel.width = STAGE_SIZE;
-			wheel.height = STAGE_SIZE;
-			wheel.x= wheel.width/2;
-			wheel.y= wheel.height/2;
+			wheel.x= STAGE_SIZE/2;
+			wheel.y= STAGE_SIZE/2;
 			
 			holder.addChild(holder1);
 			
